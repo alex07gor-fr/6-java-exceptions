@@ -18,7 +18,6 @@ public class Task07Main {
             // RuntimeException и его наследники - это unchecked исключения
             return UNCHECKED;
         } catch (Exception e) {
-            // Все остальные Exception (кроме RuntimeException) - это checked
             return CHECKED;
         }
     }

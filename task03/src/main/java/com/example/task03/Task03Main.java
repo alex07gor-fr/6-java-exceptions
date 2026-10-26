@@ -2,15 +2,17 @@ package com.example.task03;
 
 public class Task03Main {
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        throwCheckedException();
-         */
+        // throwCheckedException();
     }
 
-    //todo напишите здесь свою корректную реализацию задания
     public static void throwCheckedException() {
-
+        // IOException - классическое checked исключение
+        // (потому что оно наследуется от Exception, а не от RuntimeException)
+        try {
+            throw new java.io.IOException("Это checked исключение");
+        } catch (java.io.IOException e) {
+            // Мы его тут же ловим, чтобы main не требовал обработки
+            System.out.println("Поймали: " + e.getMessage());
+        }
     }
 }
